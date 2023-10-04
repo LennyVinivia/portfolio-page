@@ -16,12 +16,12 @@ export const HomeStyle = styled.div`
     justify-content: flex-start;
 
     .intro-title {
-      font-size: 80px;
+      font-size: 100px;
       margin-bottom: 10px;
     }
 
     .intro-profession {
-      font-size: 40px;
+      font-size: 45px;
     }
 
     .intro-footer {

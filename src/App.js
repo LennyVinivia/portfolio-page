@@ -1,8 +1,38 @@
+import { useEffect, useState } from "react";
 import "./App.css";
+import Loader from "./components/Loader/Loader";
 import Home from "./pages/Home/Home";
 
 function App() {
-  return <Home></Home>;
+  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const loadTimer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    const progressInterval = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(progressInterval);
+          return 100;
+        }
+        return prevProgress + 1;
+      });
+    }, 30);
+
+    return () => {
+      clearTimeout(loadTimer);
+      clearInterval(progressInterval);
+    };
+  }, []);
+
+  if (loading) {
+    return <Loader counter={progress} />;
+  }
+
+  return <Home />;
 }
 
 export default App;
