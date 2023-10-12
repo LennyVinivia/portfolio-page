@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const loadTimer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
 
     const progressInterval = setInterval(() => {
       setProgress((prevProgress) => {
@@ -20,7 +20,7 @@ function App() {
         }
         return prevProgress + 1;
       });
-    }, 30);
+    }, 20);
 
     return () => {
       clearTimeout(loadTimer);

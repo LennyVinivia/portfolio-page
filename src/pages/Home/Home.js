@@ -46,6 +46,7 @@ const Home = () => {
     <HomeStyle ref={containerRef}>
       <main>
         <section className="intro">
+          <p className="intro-index">/INDEX/</p>
           <h1 className="intro-title">Lenny Ruprecht</h1>
           <h2 className="intro-profession">Software Engineer</h2>
           <p className="intro-text">
@@ -69,37 +70,85 @@ const Home = () => {
           <section className="projects-section" id="project-1">
             <figure className="projects-figure">
               <img
-                src="https://picsum.photos/1000/1000"
+                src="/portfolio-page/img/Hero_Image.png"
                 alt="visual for project 1"
               />
             </figure>
             <div className="projects-content">
-              <h2 className="project-title">Project 1</h2>
-              <p className="project-description">This is a dummy description</p>
+              <p className="projects-index">/1</p>
+              <h2 className="project-title">Oppenheimer</h2>
+              <p className="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div className="projects-footer">
+                <div className="info">
+                  <p className="projects-label">Client</p>
+                  <p className="client-name">Microsoft</p>
+                  <p className="projects-label">Link</p>
+                  <div className="projects-link">
+                    <a href="https://google.com">/ VIEW PAGE</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <section className="projects-section" id="project-2">
             <figure className="projects-figure">
               <img
-                src="https://picsum.photos/1200/1200"
+                src="/portfolio-page/img/Bedroom_Homepage.png"
                 alt="visual for project 2"
               />
             </figure>
             <div className="projects-content">
-              <h2 className="project-title">Project 2</h2>
-              <p className="project-description">This is a dummy description</p>
+              <p className="projects-index">/2</p>
+              <h2 className="project-title">Manhatten</h2>
+              <p className="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div className="projects-footer">
+                <div className="info">
+                  <p className="projects-label">Client</p>
+                  <p className="client-name">Microsoft</p>
+                  <p className="projects-label">Link</p>
+                  <div className="projects-link">
+                    <a href="https://google.com">/ VIEW PAGE</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <section className="projects-section" id="project-3">
             <figure className="projects-figure">
               <img
-                src="https://picsum.photos/1000/1000"
+                src="/portfolio-page/img/Living_Room2.png"
                 alt="visual for project 3"
               />
             </figure>
             <div className="projects-content">
-              <h2 className="project-title">Project 3</h2>
-              <p className="project-description">This is a dummy description</p>
+              <p className="projects-index">/3</p>
+              <h2 className="project-title">Apollo</h2>
+              <p className="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div className="projects-footer">
+                <div className="info">
+                  <p className="projects-label">Client</p>
+                  <p className="client-name">Microsoft</p>
+                  <p className="projects-label">Link</p>
+                  <div className="projects-link">
+                    <a href="https://google.com">/ VIEW PAGE</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
