@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 
 export const HomeStyle = styled.div`
-  height: 100vh;
+  min-height: 100%;
   overflow-x: hidden;
 
   main {
     width: 100%;
-    padding: 50px;
+    padding: 25px;
     display: flex;
   }
   .intro {
@@ -119,4 +119,30 @@ export const HomeStyle = styled.div`
   scrollbar-width: none;
 
   -ms-overflow-style: none;
+
+  .intro span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+    animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  /*.intro-title span:nth-child(1),
+  .intro-profession span:nth-child(1),
+  .intro-text span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .intro-title span:nth-child(2),
+  .intro-profession span:nth-child(2),
+  .intro-text span:nth-child(2) {
+    animation-delay: 0.2s;
+  }*/
 `;

@@ -46,16 +46,24 @@ const Home = () => {
     <HomeStyle ref={containerRef}>
       <main>
         <section className="intro">
-          <p className="intro-index">/INDEX/</p>
-          <h1 className="intro-title">Lenny Ruprecht</h1>
-          <h2 className="intro-profession">Software Engineer</h2>
+          <p className="intro-index">
+            <span>/INDEX/</span>
+          </p>
+          <h1 className="intro-title">
+            <span>Lenny Ruprecht</span>
+          </h1>
+          <h2 className="intro-profession">
+            <span>Software Engineer</span>
+          </h2>
           <p className="intro-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-            imperdiet nulla, non porta orci. Nunc sollicitudin nibh in tortor
-            cursus, ut auctor nulla interdum. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas.
-            Vivamus id elit lacinia, pharetra augue id, varius mi. In commodo
-            augue non neque dignissim vestibulum.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
+              imperdiet nulla, non porta orci. Nunc sollicitudin nibh in tortor
+              cursus, ut auctor nulla interdum. Pellentesque habitant morbi
+              tristique senectus et netus et malesuada fames ac turpis egestas.
+              Vivamus id elit lacinia, pharetra augue id, varius mi. In commodo
+              augue non neque dignissim vestibulum.
+            </span>
           </p>
           <footer className="intro-footer">
             <div className="scroll-hint">
