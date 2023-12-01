@@ -5,9 +5,9 @@ export const HomeStyle = styled.div`
   overflow-x: hidden;
   display: flex;
   display: flex;
-  flex-direction: row; /* Change from column to row */
-  overflow-x: auto; /* Ensure horizontal scrolling */
-  width: max-content; /* Allow the container to grow horizontally with the content */
+  flex-direction: row; 
+  overflow-x: auto; 
+  width: max-content;
   height: 100vh;
   overflow: hidden;
 `;
