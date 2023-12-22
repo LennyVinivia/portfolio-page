@@ -76,6 +76,14 @@ export const AboutStyle = styled.div`
             border: 2px solid grey;
             padding: 5px;
             border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            will-change: transform;
+            perspective: 500px;
+
+            &:hover {
+              transform: translateY(-10px) scale(1.1);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
 
             .skill-title {
               color: white;
