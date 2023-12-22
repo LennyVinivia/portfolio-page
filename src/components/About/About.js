@@ -3,8 +3,29 @@ import JavascriptIcon from "@mui/icons-material/Javascript";
 import HtmlIcon from "@mui/icons-material/Html";
 import CssIcon from "@mui/icons-material/Css";
 import PhpIcon from "@mui/icons-material/Php";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [joke, setJoke] = useState("");
+
+  useEffect(() => {
+    fetchJoke();
+  }, []);
+
+  const fetchJoke = async () => {
+    try {
+      const response = await fetch("https://icanhazdadjoke.com/", {
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      const data = await response.json();
+      setJoke(data.joke);
+    } catch (error) {
+      console.error("Error fetching dad joke:", error);
+    }
+  };
+
   return (
     <AboutStyle>
       <div className="about">
@@ -17,6 +38,10 @@ const About = () => {
               Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
               Lorem Ipsum Lorem Ipsum Lorem Ipsum
             </p>
+            <span>Funny Dad Joke: {joke}</span>
+            <div className="dad-button" onClick={fetchJoke}>
+              Another Dad joke!
+            </div>
           </div>
           <div className="middle">
             <h1 className="skills-title">My Skills</h1>

@@ -4,7 +4,6 @@ export const AboutStyle = styled.div`
   width: auto;
   height: 100vh;
   background: black;
-  overflow: hidden;
 
   .about {
     height: 100%;
@@ -13,6 +12,7 @@ export const AboutStyle = styled.div`
     padding-left: 60px;
     padding-right: 60px;
     margin: 0 auto;
+    margin-left: 50px;
 
     .about-title {
       color: white;
@@ -28,6 +28,23 @@ export const AboutStyle = styled.div`
       .left {
         align-self: flex-start;
         width: 400px;
+
+        span {
+          color: white;
+        }
+
+        .dad-button {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          jsutify-content: center;
+          margin-top: 10px;
+          padding: 10px;
+          border: 2px solid white;
+          border-radius: 10px;
+          color: white;
+          cursor: pointer;
+        }
 
         .desc-title {
           color: white;
