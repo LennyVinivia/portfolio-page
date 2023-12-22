@@ -3,32 +3,68 @@ import styled from "@emotion/styled";
 export const ProjectStyle = styled.div`
   min-height: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   width: auto;
+  display: flex;
 
   main {
-    width: 100%;
+    width: auto;
     padding: 25px;
     display: flex;
   }
   .intro {
     position: relative;
-    min-width: 40vw;
+    max-width: 30vw;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-right: 100px;
 
     .intro-index {
       font-size: 20px;
     }
 
     .intro-title {
-      font-size: 100px;
+      font-size: 84px;
       margin-bottom: 10px;
       margin-top: 20px;
     }
 
+    @media screen and (max-width: 620px) {
+      .intro-title {
+        font-size: 70px;
+        margin-bottom: 10px;
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .intro-title {
+        font-size: 60px;
+        margin-bottom: 10px;
+        margin-top: 0;
+      }
+    }
+
     .intro-profession {
       font-size: 45px;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 450px) {
+      .intro-profession {
+        font-size: 30px;
+        margin: 0;
+      }
+    }
+
+    .intro-text {
+      width: 100%;
+
+      span {
+        width: 100%;
+      }
     }
 
     .intro-footer {
@@ -36,6 +72,7 @@ export const ProjectStyle = styled.div`
       width: 100%;
       justify-content: flex-end;
       margin-top: auto;
+      padding-bottom: 30px;
 
       .scroll-hint {
         cursor: pointer;
@@ -48,16 +85,25 @@ export const ProjectStyle = styled.div`
     gap: 200px;
     margin-left: 15vw;
 
+    .projects-section.is-in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .projects-section {
       display: flex;
       gap: 20px;
+      align-items: stretch;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
 
       .projects-figure {
         border-radius: 15px;
         overflow: hidden;
-        height: 85vh;
-        width: 35vw;
-        min-width: 600px;
+        height: 89vh;
+        width: 40vw;
+        min-width: 400px;
         display: block;
         position: relative;
 
@@ -65,7 +111,63 @@ export const ProjectStyle = styled.div`
           height: 100%;
           object-fit: cover;
         }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7); // This is your overlay color
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .overlay-text {
+          color: white;
+          text-align: center;
+          transform: translateY(20px);
+          transition: transform 0.5s ease;
+
+          p {
+            width: 250px;
+          }
+
+          .tech-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+
+            p {
+              margin: 0;
+              font-size: 20px;
+            }
+
+            .stack-icons {
+              display: flex;
+              gap: 5px;
+              flex-wrap: wrap;
+
+              .stack-icon {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+
+        &:hover .overlay {
+          opacity: 1;
+        }
+
+        &:hover .overlay-text {
+          transform: translateY(0);
+        }
       }
+
       .projects-content {
         display: flex;
         flex-direction: column;
@@ -126,6 +228,7 @@ export const ProjectStyle = styled.div`
     opacity: 0;
     filter: blur(4px);
     animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    width: 50vw;
   }
 
   @keyframes fade-in {
@@ -161,5 +264,16 @@ export const ProjectStyle = styled.div`
 
   .intro span:nth-child(7) {
     animation-delay: 0.7s;
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 `;
