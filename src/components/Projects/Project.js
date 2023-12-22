@@ -3,7 +3,6 @@ import { ProjectStyle } from "./Project.styled";
 import EastIcon from "@mui/icons-material/East";
 import About from "../About/About";
 import Timeline from "../Timeline/Timeline";
-import { useInView } from "react-intersection-observer";
 import ProjectSection from "./ProjectSection/ProjectSection";
 
 const Project = () => {
@@ -45,6 +44,31 @@ const Project = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const container = containerRef.current;
+    let startX, scrollLeft;
+
+    const startTouch = (e) => {
+      startX = e.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    };
+
+    const moveTouch = (e) => {
+      e.preventDefault();
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const walk = x - startX;
+      container.scrollLeft = scrollLeft - walk;
+    };
+
+    container.addEventListener("touchstart", startTouch);
+    container.addEventListener("touchmove", moveTouch);
+
+    return () => {
+      container.removeEventListener("touchstart", startTouch);
+      container.removeEventListener("touchmove", moveTouch);
+    };
+  }, []);
 
   return (
     <ProjectStyle ref={containerRef}>

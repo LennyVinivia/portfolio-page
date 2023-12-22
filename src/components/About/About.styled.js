@@ -37,7 +37,7 @@ export const AboutStyle = styled.div`
           width: 50%;
           display: flex;
           align-items: center;
-          jsutify-content: center;
+          justify-content: center;
           margin-top: 10px;
           padding: 10px;
           border: 2px solid white;
