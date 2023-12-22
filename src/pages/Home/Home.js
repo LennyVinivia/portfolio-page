@@ -1,14 +1,8 @@
-import { HomeStyle } from "./Home.styled";
 import Project from "../../components/Projects/Project";
-import About from "../../components/About/About";
+import Timeline from "../../components/Timeline/Timeline";
 
 const Home = () => {
-  return (
-    <HomeStyle>
-      <Project />
-      <About />
-    </HomeStyle>
-  );
+  return <Project />;
 };
 
 export default Home;
