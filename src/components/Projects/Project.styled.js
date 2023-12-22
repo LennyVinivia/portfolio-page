@@ -11,6 +11,7 @@ export const ProjectStyle = styled.div`
     width: auto;
     padding: 25px;
     display: flex;
+    margin-right: 100px;
   }
   .intro {
     position: relative;
